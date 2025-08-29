@@ -60,25 +60,38 @@ const ResetPass = () => {
       <ToastContainer position="top-right" autoClose={3000} />
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center px-[20px] py-[15px]"
+        className="flex flex-col justify-center 
+             px-[20px] py-[15px] 
+             max-w-md mx-auto 
+             md:max-w-2xl md:py-10 md:px-12 lg:max-w-3xl"
       >
-        <div className="flex items-center mb-8">
+        <div className="flex items-center  mb-8">
           <img
             src={arrow}
             alt="back"
             className="mr-2 text-black cursor-pointer"
             onClick={() => navigate("/login")}
           />
-          <h2 className="text-lg font-semibold pt-6">Forgot Password</h2>
+          <h2 className="text-lg font-semibold pt-6 md:text-2xl lg:text-3xl">
+            Forgot Password
+          </h2>
         </div>
 
         {/* phone input */}
-        <div className="flex flex-col items-start mb-4 ">
-          <label htmlFor="phone" className="text-sm font-medium text-gray-700">
+        <div className="flex flex-col items-start mb-4 w-full ">
+          <label
+            htmlFor="phone"
+            className="text-sm font-medium text-gray-700 md:text-base"
+          >
             Phone Number
           </label>
 
-          <div className="flex items-center gap-3 border border-[#E5E7EB] rounded-lg p-5 h-12 w-full mt-4 relative">
+          <div
+            className="flex items-center gap-3 
+                    border border-[#E5E7EB] rounded-lg 
+                    p-5 h-12 w-full mt-4 relative 
+                    md:h-14 md:p-6"
+          >
             {selected && (
               <div
                 className="flex items-center gap-2 cursor-pointer"
@@ -134,7 +147,7 @@ const ResetPass = () => {
             )}
           </div>
 
-          <p className="text-sm text-gray-500 mt-3 pl-5 text-[15px]">
+          <p className="text-sm text-gray-500 mt-3 pl-5 text-[15px] md:text-base">
             We'll call or text you to confirm your number. Standard message and
             data rates apply
           </p>
@@ -143,14 +156,18 @@ const ResetPass = () => {
         <div className="mt-3 px-4">
           <button
             type="submit"
-            className="h-12 w-full bg-yellow-600 text-white rounded-lg font-semibold text-base disabled:opacity-50"
+            className="h-12 w-full bg-yellow-600 text-white rounded-lg font-semibold text-base 
+                 disabled:opacity-50 md:h-14 md:text-lg lg:h-16 lg:text-xl"
             disabled={loading}
           >
             {loading ? "Sending..." : "Continue"}
           </button>
 
           <div className="flex justify-end mt-4">
-            <button type="button" className="text-sm text-gray-500 underline">
+            <button
+              type="button"
+              className="text-sm text-gray-500 underline  md:text-base"
+            >
               Need help?
             </button>
           </div>
